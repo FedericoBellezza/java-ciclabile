@@ -1,7 +1,5 @@
 package org.lessons.java.ciclabile;
 
-import java.util.Arrays;
-
 public class NumeriInteri {
     protected int[] NumeriInteri;
 
@@ -9,24 +7,29 @@ public class NumeriInteri {
     public NumeriInteri(int[] NumeriInteri){
         this.NumeriInteri = NumeriInteri;
     }
+    // se non viene passato un array di numeri interi viene creato un array vuoto
     public NumeriInteri(){
-        this.NumeriInteri = new int[] {0};
+        this.NumeriInteri = new int[] {};
     }
-    
+
+    // setter
+    public void setNumeriInteri(int[] NumeriInteri){
+        this.NumeriInteri = NumeriInteri;
+    }
+
     // metodo per prendere l'elemento successivo ad ogni invocazione
-    int indiceValoreAttuale = 0;
+    int indiceValoreAttuale = -1;
     public int getElementoSuccessivo(){
-        if (indiceValoreAttuale < NumeriInteri.length) {
-            int indiceValoreDaRitornare = indiceValoreAttuale; 
-            indiceValoreAttuale++;
-            return NumeriInteri[indiceValoreDaRitornare];
-        } else {
-            return 0;
+        if (indiceValoreAttuale == NumeriInteri.length - 1) {
+            indiceValoreAttuale = -1;
         }
+        indiceValoreAttuale++;    
+        return NumeriInteri[indiceValoreAttuale];
     }
+
     // metodo per sapere se l'array ha ancora elementi
     public boolean hasAncoraElementi(){
-            return indiceValoreAttuale < NumeriInteri.length;
+            return indiceValoreAttuale < NumeriInteri.length - 1;
         }
 
     // metodo per aggiungere un alemento
@@ -35,12 +38,8 @@ public class NumeriInteri {
         for (int i = 0; i < NumeriInteri.length; i++){
             nuovoArray[i] = NumeriInteri[i];
         }
-        nuovoArray[NumeriInteri.length] = numeroDaAggiungere;
-        this.NumeriInteri = nuovoArray;
-
-        
+        nuovoArray[nuovoArray.length - 1] = numeroDaAggiungere;
+        this.NumeriInteri = nuovoArray;       
     }
-
-    
-    }
+}
 
