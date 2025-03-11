@@ -2,7 +2,7 @@ package org.lessons.java.ciclabile;
 
 public class NumeriInteri {
     protected int[] arrayInteri;
-    private int indiceValoreAttuale = -1;
+    private int indiceValoreAttuale = 0;
 
     // costruttori
     public NumeriInteri(int[] arrayInteri){
@@ -20,16 +20,16 @@ public class NumeriInteri {
 
     // metodo per prendere l'elemento successivo ad ogni invocazione
     public int getElementoSuccessivo(){
-        if (indiceValoreAttuale == arrayInteri.length - 1) {
-            indiceValoreAttuale = -1;
+        if (indiceValoreAttuale == arrayInteri.length) {
+            indiceValoreAttuale = 0;
         }
-        indiceValoreAttuale++;
-        return arrayInteri[indiceValoreAttuale];
+        // indiceValoreAttuale++;
+        return arrayInteri[indiceValoreAttuale++];
     }
 
     // metodo per sapere se l'array ha ancora elementi
     public boolean hasAncoraElementi(){
-            return indiceValoreAttuale < arrayInteri.length - 1;
+            return indiceValoreAttuale < arrayInteri.length;
         }
 
     // metodo per aggiungere un alemento

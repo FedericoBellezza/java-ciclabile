@@ -9,7 +9,7 @@ public class main {
         System.out.println("-------------------------------------");
 
         // creo un array
-        NumeriInteri array = new NumeriInteri(new int[] {1,2,3});
+        NumeriInteri array = new NumeriInteri(new int[] {1, 2, 3, 4, 5});
 
         // for
         System.out.println("------ ciclo for ------");
