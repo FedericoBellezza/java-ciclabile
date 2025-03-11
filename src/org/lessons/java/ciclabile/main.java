@@ -13,13 +13,13 @@ public class main {
 
         // for
         System.out.println("------ ciclo for ------");
-        for (int i = 0; i < array.NumeriInteri.length; i++){
-            System.out.println(array.NumeriInteri[i]);
+        for (int i = 0; i < array.arrayInteri.length; i++){
+            System.out.println(array.arrayInteri[i]);
         }
 
         // for each
         System.out.println("------ ciclo for-each ------");
-        for (int element : array.NumeriInteri){
+        for (int element : array.arrayInteri){
             System.out.println(element);
         }
 
@@ -35,7 +35,7 @@ public class main {
         // aggiungo un elemento e stampo il nuovo array
         System.out.println("------ aggiungo un elemento all'array con il metodo addElemento ------");
         array.addElemento(6);
-        System.out.println(Arrays.toString(array.NumeriInteri));
+        System.out.println(Arrays.toString(array.arrayInteri));
 
         System.out.println("-------------------------------------");
     }

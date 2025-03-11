@@ -1,45 +1,45 @@
 package org.lessons.java.ciclabile;
 
 public class NumeriInteri {
-    protected int[] NumeriInteri;
+    protected int[] arrayInteri;
+    private int indiceValoreAttuale = -1;
 
     // costruttori
-    public NumeriInteri(int[] NumeriInteri){
-        this.NumeriInteri = NumeriInteri;
+    public NumeriInteri(int[] arrayInteri){
+        this.arrayInteri = arrayInteri;
     }
     // se non viene passato un array di numeri interi viene creato un array vuoto
     public NumeriInteri(){
-        this.NumeriInteri = new int[] {};
+        this.arrayInteri = new int[] {};
     }
 
     // setter
-    public void setNumeriInteri(int[] NumeriInteri){
-        this.NumeriInteri = NumeriInteri;
+    public void setNumeriInteri(int[] arrayInteri){
+        this.arrayInteri = arrayInteri;
     }
 
     // metodo per prendere l'elemento successivo ad ogni invocazione
-    int indiceValoreAttuale = -1;
     public int getElementoSuccessivo(){
-        if (indiceValoreAttuale == NumeriInteri.length - 1) {
+        if (indiceValoreAttuale == arrayInteri.length - 1) {
             indiceValoreAttuale = -1;
         }
-        indiceValoreAttuale++;    
-        return NumeriInteri[indiceValoreAttuale];
+        indiceValoreAttuale++;
+        return arrayInteri[indiceValoreAttuale];
     }
 
     // metodo per sapere se l'array ha ancora elementi
     public boolean hasAncoraElementi(){
-            return indiceValoreAttuale < NumeriInteri.length - 1;
+            return indiceValoreAttuale < arrayInteri.length - 1;
         }
 
     // metodo per aggiungere un alemento
     public void addElemento(int numeroDaAggiungere){
-        int[] nuovoArray= new int[NumeriInteri.length + 1];
-        for (int i = 0; i < NumeriInteri.length; i++){
-            nuovoArray[i] = NumeriInteri[i];
+        int[] nuovoArray= new int[arrayInteri.length + 1];
+        for (int i = 0; i < arrayInteri.length; i++){
+            nuovoArray[i] = arrayInteri[i];
         }
         nuovoArray[nuovoArray.length - 1] = numeroDaAggiungere;
-        this.NumeriInteri = nuovoArray;       
+        this.arrayInteri = nuovoArray;    
     }
 }
 
