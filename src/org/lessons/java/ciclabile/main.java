@@ -9,7 +9,7 @@ public class main {
         System.out.println("-------------------------------------");
 
         // creo un array
-        NumeriInteri array = new NumeriInteri(new int[] {1,2,3,4,5});
+        NumeriInteri array = new NumeriInteri(new int[] {1,2,3});
 
         // for
         System.out.println("------ ciclo for ------");
@@ -25,21 +25,12 @@ public class main {
 
         // metodi getElementoSuccessivo e hasAncoraElementi
         System.out.println("------ ciclo con il metodo (getElementoSuccessivo) e (hasAncoraElementi) ------");
-        // invoco la prima volta
-        System.out.println("Valore: " + (array.getElementoSuccessivo()));
-        System.out.println("Ci sono ancora elementi? : " + array.hasAncoraElementi());
-        // invoco la seconda volta
-        System.out.println("Valore: " + (array.getElementoSuccessivo()));
-        System.out.println("Ci sono ancora elementi? : " + array.hasAncoraElementi());
-        // invoco la terza volta
-        System.out.println("Valore: " + (array.getElementoSuccessivo()));
-        System.out.println("Ci sono ancora elementi? : " + array.hasAncoraElementi());
-        // invoco la quarta volta
-        System.out.println("Valore: " + (array.getElementoSuccessivo()));
-        System.out.println("Ci sono ancora elementi? : " + array.hasAncoraElementi());
-        // invoco la quinta volta
-        System.out.println("Valore: " + (array.getElementoSuccessivo()));
-        System.out.println("Ci sono ancora elementi? : " + array.hasAncoraElementi());
+
+        System.out.println("Valore: " + (array.getElementoSuccessivo()) + ", ci sono ancora elementi? : " + array.hasAncoraElementi());
+        System.out.println("Valore: " + (array.getElementoSuccessivo()) + ", ci sono ancora elementi? : " + array.hasAncoraElementi());
+        System.out.println("Valore: " + (array.getElementoSuccessivo()) + ", ci sono ancora elementi? : " + array.hasAncoraElementi());
+        System.out.println("Valore: " + (array.getElementoSuccessivo()) + ", ci sono ancora elementi? : " + array.hasAncoraElementi());
+        System.out.println("Valore: " + (array.getElementoSuccessivo()) + ", ci sono ancora elementi? : " + array.hasAncoraElementi());
 
         // aggiungo un elemento e stampo il nuovo array
         System.out.println("------ aggiungo un elemento all'array con il metodo addElemento ------");
