@@ -23,7 +23,6 @@ public class NumeriInteri {
         if (indiceValoreAttuale == arrayInteri.length) {
             indiceValoreAttuale = 0;
         }
-        // indiceValoreAttuale++;
         return arrayInteri[indiceValoreAttuale++];
     }
 
